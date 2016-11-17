@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tim-mehlhorn/paper-collapse.svg?branch=master)](https://travis-ci.org/tim-mehlhorn/paper-collapse)
 # \<paper-collapse\>
 
 The combination of an iron-collapse and paper style. 
