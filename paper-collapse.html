@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-collapse/iron-collapse.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<!--
+`paper-collapse`
+The combination of an iron-collapse and paper style. 
+
+@demo demo/index.html 
+-->
+
+<dom-module id="paper-collapse">
+    <template>
+        <style>
+            :host{display: block; box-sizing: content-box;margin: 1em;}
+            paper-button{ width:100%; justify-content: flex-start; display: block; --paper-button: {text-transform: inherit !important;};}
+            paper-button span{width:100%;}
+        </style>
+    <paper-button on-click="toggle" raised toggles="true"><span>[[title]]</span>
+        <iron-collapse id="collapse">
+            <hr>
+            <content>Content goes here...</content>
+        </iron-collapse>
+    </paper-button>
+    </template>
+<script>
+    Polymer({
+        is: 'paper-collapse',
+        properties: {title: {type: String,value: 'Collapse Title',},},
+        toggle: function() { this.$.collapse.toggle();}
+    });
+</script>
+</dom-module>
